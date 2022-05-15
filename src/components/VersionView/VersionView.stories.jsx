@@ -6,11 +6,9 @@ export default {
   component: VersionView,
 };
 
-const Template = (args) => <VersionView {...args} />
+const Template = (args) => <VersionView {...args} />;
 
-export const Example = Template.bind({});
-Example.args = {
-  version: {
-    current: "1.0.0",
-  },
+export const ExampleWithVersion = Template.bind({});
+ExampleWithVersion.args = {
+  current: "1.0.0",
 };
