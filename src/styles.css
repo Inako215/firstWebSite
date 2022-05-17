@@ -4,3 +4,7 @@
   background-color: var(--bs-light);
   border-radius: 0.3rem;
 }
+
+.copyright {
+  font-size: x-small;
+}

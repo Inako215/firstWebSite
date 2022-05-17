@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
  *  View coponent that displays the version of the application
  */
 
+// eslint-disable-next-line react/prop-types
 export function VersionView({ current }) {
   return (
     <div className="col-xs-6 col-lg-4 text-center">
