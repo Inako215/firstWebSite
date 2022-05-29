@@ -6,28 +6,28 @@ import PropTypes from "prop-types";
  */
 export function NavBarDropDownView({ airlineName, bidTypesPath, pilotsPath }) {
   return (
-    <div className="Dropdown">
-      <button
-        className="btn dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-      >
-        {airlineName}
-      </button>
-      <ul Dropdown className="dropdown-menu">
-        <li>
-          <a className="dropdown-item" href={bidTypesPath}>
-            BidTypes
-          </a>
-        </li>
-        <div className="dropdown-divider"></div>
-        <li>
+    <nav>
+      <div className="dropdown customNav d-inline-block">
+        <button
+          className="btn dropdown-toggle btnText btnHover"
+          type="button"
+          data-bs-toggle="dropdown"
+        >
+          {airlineName}
+        </button>
+        <ul Dropdown className="dropdown-menu">
+          <li>
+            <a className="dropdown-item" href={bidTypesPath}>
+              BidTypes
+            </a>
+          </li>
+          <div className="dropdown-divider"></div>
           <a className="dropdown-item" href={pilotsPath}>
             Pilots
           </a>
-        </li>
-      </ul>
-    </div>
+        </ul>
+      </div>
+    </nav>
   );
 }
 

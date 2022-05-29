@@ -1,29 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { NavBarDropDownView } from "../NavBarDropDownView/NavBarDropDownView";
 
 /**
  * View component that displays navbar with dropdowns
  */
 export function NavBarView({ navBarView }) {
   return (
-    <div className="container-fluid">
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar">
         <ul className="nav">
-          <li className="nav-item dropdown">{navBarView.americanAirlines}</li>
-          <li className="nav-item dropdown">{navBarView.alaskaAirlines}</li>
-          <li className="nav-item dropdown">{navBarView.frontierAirlines}</li>
-          <li className="nav-item dropdown">{navBarView.ups}</li>
+            {navBarView?.map(function (airline) {
+              return (
+                <li key={airline.id}>
+                  <NavBarDropDownView
+                    airlineName={airline.airlineName}
+                    bidTypesPath={airline.bidTypesPath}
+                    pilotsPath={airline.PilotsPath}
+                  />
+                </li>
+              );
+            })}
         </ul>
       </nav>
-    </div>
   );
 }
 
 NavBarView.propTypes = {
   navBarView: PropTypes.shape({
-    americanAirlines: PropTypes.object,
-    alaskaAirlines: PropTypes.object,
-    frontierAirlines: PropTypes.object,
-    ups: PropTypes.object,
+    id: PropTypes.any,
+    airlineName: PropTypes.string,
+    map: PropTypes.any,
+    // americanAirlines: PropTypes.string,
+    // alaskaAirlines: PropTypes.string,
+    // frontierAirlines: PropTypes.string,
+    // ups: PropTypes.string,
   }),
 };

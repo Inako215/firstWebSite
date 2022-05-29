@@ -8,3 +8,17 @@
 .copyright {
   font-size: x-small;
 }
+
+.customNav {
+  background-color: #83a4c4;
+}
+
+.btnText {
+  color: #fbfbfd;
+}
+
+.btnHover:hover {
+  color: #dcdce0;
+  transition: 0.7s;
+}
+
