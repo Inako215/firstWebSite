@@ -22,3 +22,40 @@
   transition: 0.7s;
 }
 
+.btn1 {
+  background-color: #77a6d0;
+  color: #fbfbfd;
+  width: 150px;
+}
+
+.btn2 {
+  background-color: #93b3d0;
+  color: #fbfbfd;
+  width: 150px;
+}
+
+.btn3 {
+  background-color: #db524b;
+  color: #fbfbfd;
+  width: 150px;
+}
+
+.icons {
+  color: #3779b9;
+}
+
+.striped:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.status {
+  background-color: lightyellow;
+}
+
+.banner {
+  background-color: white;
+}
+
+.backg {
+  background-color: #F3F3F4 !important;
+}
