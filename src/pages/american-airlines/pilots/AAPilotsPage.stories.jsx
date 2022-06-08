@@ -1,18 +1,18 @@
 import React from "react";
-import { PilotsListView } from "./PilotsListView";
-import * as pilotTypes from "../PilotView/PilotView.stories";
-import alexJohnathan from "../../public/alex-johnathan.jpeg";
-import janetCarton from "../../public/janet-carton.jpeg";
-import michaelZimber from "../../public/michael-zimber.jpeg";
-import monicaSmith from "../../public/monica-smith.jpeg";
-import sandraSmith from "../../public/sandra-smith.jpeg";
+import { AAPilotsPage } from "./AAPilotsPage";
+import * as pilotTypes from "../../../components/PilotView/PilotView.stories";
+import alexJohnathan from "../../../public/alex-johnathan.jpeg";
+import janetCarton from "../../../public/janet-carton.jpeg";
+import michaelZimber from "../../../public/michael-zimber.jpeg";
+import monicaSmith from "../../../public/monica-smith.jpeg";
+import sandraSmith from "../../../public/sandra-smith.jpeg";
 
 export default {
-  title: "Components/PilotsListView",
-  component: PilotsListView,
+  title: "Pages/AAPilotsPage",
+  component: AAPilotsPage,
 };
 
-const Template = (args) => <PilotsListView {...args} />;
+const Template = (args) => <AAPilotsPage {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

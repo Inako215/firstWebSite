@@ -1,3 +1,3 @@
-import AABidtTypesPage from "../AABidTypesPage";
+import AABidtTypesPage from "../bidtypes/AABidTypesPage";
 
 export default AABidtTypesPage;

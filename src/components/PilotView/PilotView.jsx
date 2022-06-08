@@ -20,13 +20,13 @@ export function PilotView({
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-4 text-center">
+          <div className="col-sm-2 col-md-4 text-center">
             <img className="rounded-circle img-fluid" src={photo} />
             <p>
               {title} <br /> {airport}
             </p>
           </div>
-          <div className="col-sm-8">
+          <div className="col-sm-10 col-md-8">
             <h4>{name}</h4>
             <div className="text-start"
             >

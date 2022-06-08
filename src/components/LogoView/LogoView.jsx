@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../BidProLogo.gif";
+import logo from "../../public/BidProLogo.gif";
 
 /**
  * View component that displays the BidPro logo
