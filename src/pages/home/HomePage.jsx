@@ -37,8 +37,4 @@ HomePage.propTypes = {
   jumbotronView: PropTypes.any,
   airlineView: PropTypes.any,
   footerView: PropTypes.any,
-  // airlineView1: PropTypes.any,
-  // airlineView2: PropTypes.any,
-  // airlineView3: PropTypes.any,
-  // airlineView4: PropTypes.any,
 };

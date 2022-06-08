@@ -11,6 +11,6 @@ const Template = (args) => <NavBarDropDownView {...args} />;
 export const ExampleWithDropDownNavBar = Template.bind({});
 ExampleWithDropDownNavBar.args = {
   airlineName: "American Airlines",
-  bidTypesPath: "/american-airlines/bid-types",
+  bidTypesPath: "/american-airlines/bidtypes",
   pilotsPath: "/american-airlines/pilots",
 };

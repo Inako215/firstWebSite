@@ -2,7 +2,7 @@ import React from "react";
 import { HeaderView } from "../../components/HeaderView/HeaderView";
 import { LogoView } from "../../components/LogoView/LogoView";
 import { NavBarView } from "../../components/NavBarView/NavBarView";
-import { HomePage } from "./HomePage";
+import { HomePage } from "../home/HomePage";
 import { JumbotronView } from "../../components/JumbotronView/JumbotronView";
 import { AdministrationView } from "../../components/AdministrationView/AdministrationView";
 import { VersionView } from "../../components/VersionView/VersionView";
@@ -26,25 +26,25 @@ Default.args = {
             {
               id: 1,
               airlineName: "American Airlines",
-              bidTypesPath: "american-airlines/bid-types",
+              bidTypesPath: "american-airlines/bidtypes",
               pilotsPath: "american-airlines/pilots",
             },
             {
               id: 2,
               airlineName: "Alaska Airlines",
-              bidTypesPath: "alaska-airlines/bid-types",
+              bidTypesPath: "alaska-airlines/bidtypes",
               pilotsPath: "alaska-airlines/pilots",
             },
             {
               id: 3,
               airlineName: "Frontier Airlines",
-              bidTypesPath: "frontier-airlines/bid-types",
+              bidTypesPath: "frontier-airlines/bidtypes",
               pilotsPath: "frontier-airlines/pilots",
             },
             {
               id: 4,
               airlineName: "UPS",
-              bidTypesPath: "ups-airlines/bid-types",
+              bidTypesPath: "ups-airlines/bidtypes",
               pilotsPath: "ups-airlines/pilots",
             },
           ]}
