@@ -14,6 +14,9 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js",
   },
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
   devServer: {
     stats: "minimal",
     overlay: true,
