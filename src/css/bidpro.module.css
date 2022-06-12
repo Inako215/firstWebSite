@@ -16,4 +16,22 @@
   color: rgb(0, 128, 128);
   background-color: white;
   border-radius: 2px;
+  text-decoration: none;
 }
+
+.textbox {
+    font-size: 32px;
+    padding: 2px;
+    width: 64px;
+    text-align: center;
+    margin-right: 8px;
+  }
+
+  .amountButton{
+    width: 200px;
+    font-size: 32px;
+    border: 2px solid rgb(0, 128, 128);
+    color: rgb(0, 128, 128);
+    background-color: white;
+    border-radius: 2px;
+  }

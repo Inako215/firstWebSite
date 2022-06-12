@@ -6,7 +6,8 @@ import HeaderView from "./components/HeaderView/index";
 import AABidTypesPage from "./pages/american-airlines/bidtypes/index";
 import * as BidTypes from "./components/BidTypeView/BidTypeView.stories";
 import * as pilotTypes from "./components/PilotView/PilotView.stories";
-import AAPilotsPage from "./pages/american-airlines/AAPilotsPage";
+import AAPilotsPage from "./pages/redux-lectures/AAPilotsPage";
+import ASPilotsPage from "./pages/redux-lectures/ASPilotsPage";
 import alexJohnathan from "./public/images/alex-johnathan.jpeg";
 import janetCarton from "./public/images/janet-carton.jpeg";
 import michaelZimber from "./public/images/michael-zimber.jpeg";
@@ -92,6 +93,7 @@ function App() {
             />
           }
         />
+        <Route path="/alaska-airlines/pilots" element={<ASPilotsPage />} />
       </Routes>
 
       <FooterView />
