@@ -6,7 +6,21 @@ export default {
   component: NavBarView,
 };
 
-const Template = (args) => <NavBarView {...args} />;
+const Template = (args) => (
+  <nav className="navbar navbar-expand-lg navbar-dark bg-light py-0">
+    <div className="container-fluid ps-0">
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <NavBarView {...args} />
+    </div>
+  </nav>
+);
 
 export const ExampleWithNavBar = Template.bind({});
 ExampleWithNavBar.args = {
@@ -22,12 +36,14 @@ ExampleWithNavBar.args = {
       airlineName: "Alaska Airlines",
       bidTypesPath: "alaska-airlines/bidtypes",
       pilotsPath: "alaska-airlines/pilots",
-    },{
+    },
+    {
       id: 3,
       airlineName: "Frontier Airlines",
       bidTypesPath: "frontier-airlines/bidtypes",
       pilotsPath: "frontier-airlines/pilots",
-    },{
+    },
+    {
       id: 4,
       airlineName: "UPS",
       bidTypesPath: "ups-airlines/bidtypes",

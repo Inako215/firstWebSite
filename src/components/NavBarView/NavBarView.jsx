@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { NavBarDropDownView } from "../NavBarDropDownView/NavBarDropDownView";
 
 /**
@@ -7,32 +7,29 @@ import { NavBarDropDownView } from "../NavBarDropDownView/NavBarDropDownView";
  */
 export function NavBarView({ navBarView }) {
   return (
-      <nav className="navbar">
-        <ul className="nav">
-            {navBarView?.map(function (airline) {
-              return (
-                <li key={airline.id}>
-                  <NavBarDropDownView
-                    airlineName={airline.airlineName}
-                    bidTypesPath={airline.bidTypesPath}
-                    pilotsPath={airline.PilotsPath}
-                  />
-                </li>
-              );
-            })}
-        </ul>
-      </nav>
+    <div className="collapse navbar-collapse justify-content-end"
+    id="navbarSupportedContent">
+      <ul className="navbar-nav">
+        {navBarView?.map(function (airline, i) {
+          return (
+            <li key={i}>
+              <NavBarDropDownView
+                airlineName={airline.airlineName}
+                bidTypesPath={airline.bidTypesPath}
+                pilotsPath={airline.PilotsPath}
+              />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }
 
-NavBarView.propTypes = {
-  navBarView: PropTypes.shape({
-    id: PropTypes.any,
-    airlineName: PropTypes.string,
-    map: PropTypes.any,
-    // americanAirlines: PropTypes.string,
-    // alaskaAirlines: PropTypes.string,
-    // frontierAirlines: PropTypes.string,
-    // ups: PropTypes.string,
-  }),
-};
+// NavBarView.propTypes = {
+//   navBarView: PropTypes.arrayOf.shape({
+//     id: PropTypes.any,
+//     airlineName: PropTypes.string,
+//     map: PropTypes.any,
+//   }),
+// };

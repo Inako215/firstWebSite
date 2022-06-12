@@ -1,6 +1,6 @@
 import React from "react";
 import { PilotView } from "./PilotView";
-import johnSmith from "../../public/john-smith.jpeg";
+import johnSmith from "../../public/images/john-smith.jpeg";
 
 export default {
   title: "Components/PilotView",

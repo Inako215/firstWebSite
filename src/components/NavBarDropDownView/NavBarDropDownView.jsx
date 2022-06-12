@@ -15,7 +15,7 @@ export function NavBarDropDownView({ airlineName, bidTypesPath, pilotsPath }) {
         >
           {airlineName}
         </button>
-        <ul Dropdown className="dropdown-menu">
+        <ul className="dropdown-menu dropdown-menu-end">
           <li>
             <a className="dropdown-item" href={bidTypesPath}>
               BidTypes

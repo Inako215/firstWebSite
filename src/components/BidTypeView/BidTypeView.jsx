@@ -1,9 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { ImCloudDownload } from "react-icons/im";
+import { BiChevronsRight } from "react-icons/bi";
+import { FaTimes } from "react-icons/fa";
+
 export function BidTypeView({
-  pilots: { id, bidTypes, status, bidPeriods, lastImport },
-  buttons: { button1, button2, button3, button4, button5 },
+  pilot: { id, bidTypes, status, bidPeriods, lastImport },
 }) {
   return (
     <>
@@ -25,35 +28,35 @@ export function BidTypeView({
                   status === "IMPORTING" ? "d-none" : ""
                 }`}
               >
-                {button1.symbol} {button1.text}
+                <ImCloudDownload /> Retry Import
               </button>
               <button
                 className={`btn btn2 rounded-3 m-1 ${
                   status === "IMPORTING" ? "d-none" : ""
                 }`}
               >
-                {button2.text} {button2.symbol}
+                Bid Periods <BiChevronsRight />
               </button>
               <button
                 className={`btn btn2 rounded-3 m-1 ${
                   status === "IMPORTING" ? "d-none" : ""
                 }`}
               >
-                {button3.text} {button3.symbol}
+                Import History <BiChevronsRight />
               </button>
               <button
                 className={`btn btn3 rounded-3 m-1 ${
                   status === "IMPORTING" ? "d-none" : ""
                 }`}
               >
-                {button4.symbol} {button4.text}
+                <FaTimes /> Delete
               </button>
               <button
                 className={`btn btn3 rounded-3 m-1 ${
                   status === "IMPORTING" ? "" : "d-none"
                 }`}
               >
-                {button5.text} {button5.symbol}
+                Cancel
               </button>
             </div>
           </div>
@@ -65,18 +68,11 @@ export function BidTypeView({
 }
 
 BidTypeView.propTypes = {
-  pilots: PropTypes.shape({
+  pilot: PropTypes.shape({
     id: PropTypes.string,
     bidTypes: PropTypes.string,
     status: PropTypes.string,
     bidPeriods: PropTypes.string,
     lastImport: PropTypes.string,
-  }),
-  buttons: PropTypes.shape({
-    button1: PropTypes.any,
-    button2: PropTypes.any,
-    button3: PropTypes.any,
-    button4: PropTypes.any,
-    button5: PropTypes.any,
   }),
 };

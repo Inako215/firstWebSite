@@ -1,11 +1,11 @@
 import React from "react";
 import { PilotsListView } from "./PilotsListView";
 import * as pilotTypes from "../PilotView/PilotView.stories";
-import alexJohnathan from "../../public/alex-johnathan.jpeg";
-import janetCarton from "../../public/janet-carton.jpeg";
-import michaelZimber from "../../public/michael-zimber.jpeg";
-import monicaSmith from "../../public/monica-smith.jpeg";
-import sandraSmith from "../../public/sandra-smith.jpeg";
+import alexJohnathan from "../../public/images/alex-johnathan.jpeg";
+import janetCarton from "../../public/images/janet-carton.jpeg";
+import michaelZimber from "../../public/images/michael-zimber.jpeg";
+import monicaSmith from "../../public/images/monica-smith.jpeg";
+import sandraSmith from "../../public/images/sandra-smith.jpeg";
 
 export default {
   title: "Components/PilotsListView",

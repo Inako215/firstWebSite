@@ -14,9 +14,6 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js",
   },
-  resolve: {
-    extensions: [".js", ".jsx"]
-  },
   devServer: {
     stats: "minimal",
     overlay: true,
@@ -37,11 +34,30 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader", "eslint-loader"],
+        resolve: {
+          extensions: [".js", ".jsx"],
+        },
       },
       {
         test: /(\.css)$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(jpeg|png|gif|jpeg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "images/",
+              publicPath: "images/",
+            },
+          },
+        ],
+      },
     ],
+  },
+  resolve: {
+    extensions: ["", ".js", ".jsx"],
   },
 };

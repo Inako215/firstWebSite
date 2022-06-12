@@ -7,7 +7,7 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
  */
 export function AirlineView({ name, path }) {
   return (
-    <div className="col-sm-12 col-md">
+    <div className="col-xs-12 col-sm-6 mt-3">
       <h1>{name}</h1>
       <p>
         View the monthly bid data, import history &amp; download statistics.

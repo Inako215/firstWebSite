@@ -1,3 +1,7 @@
+.bg-light {
+  background-color: #83a4c4 !important;
+}
+
 .jumbotron {
   padding: 4rem 2rem;
   margin-bottom: 2rem;

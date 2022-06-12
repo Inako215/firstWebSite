@@ -4,7 +4,7 @@ import { TiFilter, TiPlus } from "react-icons/ti";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { BidTypeView } from "../BidTypeView/BidTypeView";
 
-export function BidTypeListView({ pilots, buttons }) {
+export function BidTypeListView({ pilot }) {
   return (
     <>
       <div className="container-fluid">
@@ -21,10 +21,10 @@ export function BidTypeListView({ pilots, buttons }) {
           <hr className="mt-2" />
           <div className="row">
             <div className="col-12">
-              {pilots.map(function (pilots) {
+              {pilot?.map((pilot) => {
                 return (
                   <>
-                    <BidTypeView pilots={pilots} buttons={buttons} />
+                    <BidTypeView pilot={pilot} />
                   </>
                 );
               })}
@@ -37,6 +37,5 @@ export function BidTypeListView({ pilots, buttons }) {
 }
 
 BidTypeListView.propTypes = {
-  pilots: PropTypes.any,
-  buttons: PropTypes.any,
+  pilot: PropTypes.any,
 };
