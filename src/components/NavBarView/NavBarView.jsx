@@ -16,7 +16,7 @@ export function NavBarView({ navBarView }) {
               <NavBarDropDownView
                 airlineName={airline.airlineName}
                 bidTypesPath={airline.bidTypesPath}
-                pilotsPath={airline.PilotsPath}
+                pilotsPath={airline.pilotsPath}
               />
             </li>
           );

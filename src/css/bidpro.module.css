@@ -1,3 +1,19 @@
 .row {
-    background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value {
+  font-size: 32px;
+}
+
+.button {
+  width: 150px;
+  font-size: 32px;
+  padding: 1px;
+  border: 2px solid rgb(0, 128, 128);
+  color: rgb(0, 128, 128);
+  background-color: white;
+  border-radius: 2px;
 }

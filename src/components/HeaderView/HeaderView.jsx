@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { LogoView } from "../LogoView/LogoView";
 import { NavBarView } from "../NavBarView/NavBarView";
@@ -11,7 +12,9 @@ export function HeaderView() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-light py-0">
       <div className="container-fluid ps-0">
-        <LogoView />
+        <Link to="/">
+          <LogoView />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/home/index";
+import HomePage from "./pages/redux-lectures/HomePage";
 import FooterView from "./components/FooterView/index";
 import HeaderView from "./components/HeaderView/index";
 import AABidTypesPage from "./pages/american-airlines/bidtypes/index";
