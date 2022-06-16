@@ -1,13 +1,13 @@
 import React from "react";
-import { AAPilotsPage } from "./AAPilotsPage";
+import { ASPilotsPage } from "./ASPilotsPage";
 import photo from "../../../public/images/stockPhoto.jpeg";
 
 import { Provider } from "react-redux";
 import { action } from "@storybook/addon-actions";
 
 export default {
-  title: "Pages/AAPilotsPage",
-  component: AAPilotsPage,
+  title: "Pages/ASPilotsPage",
+  component: ASPilotsPage,
 };
 
 const store = {
@@ -43,7 +43,7 @@ const store = {
 
 const Template = (args) => (
   <Provider store={store}>
-    <AAPilotsPage {...args} />
+    <ASPilotsPage {...args} />
   </Provider>
 );
 

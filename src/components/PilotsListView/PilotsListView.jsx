@@ -2,7 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { PilotView } from "../PilotView/PilotView";
 
-export function PilotsListView({ pilots }) {
+import { useSelector } from "react-redux";
+import { selectPilots } from "../../redux/pilotsSlice";
+
+export function PilotsListView({ airline, pilots }) {
+  const storedPilots = useSelector(selectPilots);
+  if (storedPilots && storedPilots.length > 0) {
+    pilots = storedPilots.filter((pilot) => pilot.airline === airline);
+  }
   return (
     <>
       <div className="container-fluid backg pt-2">
@@ -15,13 +22,13 @@ export function PilotsListView({ pilots }) {
           </div>
         </div>
         <div className="row">
-          {pilots.map(function (pilot) {
+          {pilots.map(function (pilots) {
             return (
               <>
                 <div className="col-4 p-3">
                   <div className="banner card">
                       <div className="card-body">
-                    <PilotView pilot={pilot} />
+                    <PilotView pilots={pilots} />
                     </div>
                   </div>
                 </div>
@@ -36,4 +43,5 @@ export function PilotsListView({ pilots }) {
 
 PilotsListView.propTypes = {
   pilots: PropTypes.any,
+  airline: PropTypes.any,
 }

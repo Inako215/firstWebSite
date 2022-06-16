@@ -7,28 +7,28 @@ import { Link } from "react-router-dom";
  */
 export function NavBarDropDownView({ airlineName, bidTypesPath, pilotsPath }) {
   return (
-    <nav>
-      <div className="dropdown customNav d-inline-block">
-        <button
-          className="btn dropdown-toggle btnText btnHover"
-          type="button"
-          data-bs-toggle="dropdown"
-        >
-          {airlineName}
-        </button>
-        <ul className="dropdown-menu dropdown-menu-end">
-          <li>
-            <Link className="dropdown-item" to={bidTypesPath}>
-              BidTypes
+      <nav>
+        <div className="dropdown customNav d-inline-block">
+          <button
+            className="btn dropdown-toggle btnText btnHover"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            {airlineName}
+          </button>
+          <ul className="dropdown-menu dropdown-menu-end">
+            <li>
+              <Link className="dropdown-item" to={bidTypesPath}>
+                BidTypes
+              </Link>
+            </li>
+            <div className="dropdown-divider"></div>
+            <Link className="dropdown-item" to={pilotsPath}>
+              Pilots
             </Link>
-          </li>
-          <div className="dropdown-divider"></div>
-          <Link className="dropdown-item" to={pilotsPath}>
-            Pilots
-          </Link>
-        </ul>
-      </div>
-    </nav>
+          </ul>
+        </div>
+      </nav>
   );
 }
 

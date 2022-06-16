@@ -46,8 +46,8 @@ ExampleWithNavBar.args = {
     {
       id: 4,
       airlineName: "UPS",
-      bidTypesPath: "ups-airlines/bidtypes",
-      pilotsPath: "/ups-airlines/pilots",
+      bidTypesPath: "ups/bidtypes",
+      pilotsPath: "/ups/pilots",
     },
   ],
   //   americanAirlines: (

@@ -1,55 +1,49 @@
 import React from "react";
 import { AABidTypesPage } from "./AABidTypesPage";
-import * as BidTypes from "../../../components/BidTypeView/BidTypeView.stories";
+
+import { Provider } from "react-redux";
+import { action } from "@storybook/addon-actions";
 
 export default {
   title: "Pages/AABidTypesPage",
   component: AABidTypesPage,
 };
 
-const Template = (args) => <AABidTypesPage {...args} />;
+const store = {
+  getState: () => {
+    return {
+      bidTypes: [
+        {
+          id: "1",
+          airline: "AA",
+          seat: "CAPTAIN",
+          domicile: "ANC",
+          fleet: "73G",
+          status: "Current",
+          numOfBidPeriods: "3",
+          lastImported: `${new Date()}`,
+        },
+        {
+          id: "2",
+          airline: "AA",
+          seat: "CAPTAIN",
+          domicile: "ANC",
+          fleet: "73G",
+          status: "Current",
+          numOfBidPeriods: "3",
+          lastImported: `${new Date()}`,
+        },
+      ],
+    };
+  },
+  subscribe: () => 0,
+  dispatch: action("dispatch"),
+};
+
+const Template = (args) => (
+  <Provider store={store}>
+    <AABidTypesPage {...args} />
+  </Provider>
+);
 
 export const Default = Template.bind({});
-Default.args = {
-  pilot: [
-    { ...BidTypes.Default.args.pilot, id: "1", bidTypes: "CAPTAIN ANC 73G" },
-    { ...BidTypes.Default.args.pilot, id: "2", bidTypes: "CAPTAIN LAX 73G" },
-    { ...BidTypes.Default.args.pilot, id: "3", bidTypes: "CAPTAIN PDX 73G" },
-    { ...BidTypes.Default.args.pilot, id: "4", bidTypes: "CAPTAIN SEA 73G" },
-    {
-      ...BidTypes.Default.args.pilot,
-      id: "5",
-      bidTypes: "FIRST OFFICER ANC 73G",
-    },
-    {
-      ...BidTypes.Default.args.pilot,
-      id: "6",
-      bidTypes: "FIRST OFFICER LAX 73G",
-    },
-  ],
-};
-
-export const Importing = Template.bind({});
-Importing.args = {
-  pilot: [
-    { ...BidTypes.Default.args.pilot, id: "1", bidTypes: "CAPTAIN ANC 73G" },
-    {
-      ...BidTypes.Default.args.pilot,
-      id: "2",
-      bidTypes: "CAPTAIN LAX 73G",
-      status: "IMPORTING",
-    },
-    { ...BidTypes.Default.args.pilot, id: "3", bidTypes: "CAPTAIN PDX 73G" },
-    { ...BidTypes.Default.args.pilot, id: "4", bidTypes: "CAPTAIN SEA 73G" },
-    {
-      ...BidTypes.Default.args.pilot,
-      id: "5",
-      bidTypes: "FIRST OFFICER ANC 73G",
-    },
-    {
-      ...BidTypes.Default.args.pilot,
-      id: "6",
-      bidTypes: "FIRST OFFICER LAX 73G",
-    },
-  ],
-};

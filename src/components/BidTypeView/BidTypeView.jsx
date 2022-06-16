@@ -6,7 +6,7 @@ import { BiChevronsRight } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
 
 export function BidTypeView({
-  pilot: { id, bidTypes, status, bidPeriods, lastImport },
+  bidTypes: { id, fleet, seat, domicile, status, numOfBidPeriods, lastImported },
 }) {
   return (
     <>
@@ -18,10 +18,12 @@ export function BidTypeView({
             }`}
           >
             <div className="col-sm-1">{id}</div>
-            <div className="col-sm-2">{bidTypes}</div>
+            <div className="col-sm-2">
+              {seat} {domicile} {fleet}
+            </div>
             <div className="col-sm-2 text-end">{status}</div>
-            <div className="col-sm-3 text-center">{bidPeriods}</div>
-            <div className="col-sm-2 text-center">{lastImport}</div>
+            <div className="col-sm-3 text-center">{numOfBidPeriods}</div>
+            <div className="col-sm-2 text-center">{lastImported}</div>
             <div className={`col-sm-2 text-end`}>
               <button
                 className={`btn btn1 rounded-3 m-1 ${
@@ -68,11 +70,13 @@ export function BidTypeView({
 }
 
 BidTypeView.propTypes = {
-  pilot: PropTypes.shape({
+  bidTypes: PropTypes.shape({
     id: PropTypes.string,
-    bidTypes: PropTypes.string,
+    seat: PropTypes.any,
+    domicile: PropTypes.string,
+    fleet: PropTypes.string,
     status: PropTypes.string,
-    bidPeriods: PropTypes.string,
-    lastImport: PropTypes.string,
+    numOfBidPeriods: PropTypes.any,
+    lastImported: PropTypes.any,
   }),
 };

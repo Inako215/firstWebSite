@@ -2,12 +2,12 @@ import React from "react";
 
 import { PilotsListView } from "../../../components/PilotsListView/PilotsListView";
 
-export function AAPilotsPage() {
+export function FAPilotsPage() {
   return (
     <>
-      <PilotsListView airline ="AA" pilots={[]} />
+      <PilotsListView airline="FA" pilots={[]} />
     </>
   );
 }
 
-export default AAPilotsPage;
+export default FAPilotsPage;

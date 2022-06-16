@@ -1,6 +1,6 @@
 import React from "react";
 import { PilotView } from "./PilotView";
-import johnSmith from "../../public/images/john-smith.jpeg";
+import photo from "../../public/images/stockPhoto.jpeg";
 
 export default {
   title: "Components/PilotView",
@@ -11,16 +11,24 @@ const Template = (args) => <PilotView {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  pilot: {
-    photo: johnSmith,
-    title: "CPT 737",
-    airport: "GEG",
-    name: "John Smith",
-    location: "Riviera State 32/106",
+  pilots: {
+    id: 1,
+    airline: "AA",
+    photo: photo,
+    seat: "CPT",
+    fleet: "737",
+    domicile: "GEG",
+    nameFirst: "John",
+    nameLast: "Smith",
+    trainingFacility: "Riviera State 32/106",
     company: "Twitter, Inc.",
-    street: "795 Folsom Ave, Suite",
-    suite: "600",
-    state: "San Fransisco, CA 94107",
-    phone: "P:(123) 456-7890",
+    address1: "795 Folsom Ave",
+    address2: " Suite 600",
+    city: "San Fransisco,",
+    state: "CA",
+    postalCode: "94107",
+    areaCode: "(123)",
+    prefix: "456",
+    suffix: "7890",
   },
 };

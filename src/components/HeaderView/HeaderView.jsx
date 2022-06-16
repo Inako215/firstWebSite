@@ -12,9 +12,9 @@ export function HeaderView() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-light py-0">
       <div className="container-fluid ps-0">
-        <Link to="/">
-          <LogoView />
-        </Link>
+          <Link to="/">
+            <LogoView />
+          </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -42,8 +42,8 @@ export function HeaderView() {
             },
             {
               airlineName: "UPS",
-              bidTypesPath: "ups-airlines/bidtypes",
-              pilotsPath: "ups-airlines/pilots",
+              bidTypesPath: "ups/bidtypes",
+              pilotsPath: "ups/pilots",
             },
           ]}
         />

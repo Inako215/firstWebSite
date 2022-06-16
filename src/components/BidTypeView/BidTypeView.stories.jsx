@@ -10,19 +10,13 @@ const Template = (args) => <BidTypeView {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  pilot: {
+  bidTypes: {
     id: "1",
-    bidTypes: "CAPTAIN ANC 73G",
+    seat: "CAPTAIN",
+    domicile: "ANC",
+    fleet: "73G",
     status: "Current",
-    bidPeriods: "1",
-    lastImport: " Nov 1 2017 12:00AM",
-  },
-};
-
-export const Importing = Template.bind({});
-Importing.args = {
-  pilot: {
-    ...Default.args.pilot,
-    status: "IMPORTING",
+    numOfBidPeriods: "3",
+    lastImported: " Nov 1 2017 12:00AM",
   },
 };

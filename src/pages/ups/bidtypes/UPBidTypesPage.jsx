@@ -2,15 +2,15 @@ import React from "react";
 
 import { BidTypeListView } from "../../../components/BidTypeListView/BidTypeListView";
 
-export function AABidTypesPage() {
+export function UPBidTypesPage() {
   return (
     <>
       <div className="container-fluid">
-        <h1>American Airlines - BidTypes</h1>
-        <BidTypeListView airline="AA" bidTypes={[]} />
+        <h1>UPS - BidTypes</h1>
+        <BidTypeListView airline="UP" bidTypes={[]} />
       </div>
     </>
   );
 }
 
-export default AABidTypesPage;
+export default UPBidTypesPage;

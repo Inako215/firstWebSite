@@ -3,17 +3,23 @@ import PropTypes from "prop-types";
 import { ImLocation } from "react-icons/im";
 
 export function PilotView({
-  pilot: {
+  pilots: {
     photo,
-    title,
-    airport,
-    name,
-    location,
+    seat,
+    fleet,
+    domicile,
+    nameFirst,
+    nameLast,
+    trainingFacility,
     company,
-    street,
-    suite,
+    address1,
+    address2,
+    city,
     state,
-    phone,
+    postalCode,
+    areaCode,
+    prefix,
+    suffix,
   },
 }) {
   return (
@@ -21,24 +27,26 @@ export function PilotView({
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-2 col-md-4 text-center">
-            <img className="rounded-circle img-fluid" src={photo} />
+            <img className="rounded-circle img-fluid" src={"/" + photo} />
             <p>
-              {title} <br /> {airport}
+              {seat} {fleet} <br /> {domicile}
             </p>
           </div>
           <div className="col-sm-10 col-md-8">
-            <h4>{name}</h4>
-            <div className="text-start"
-            >
-              <ImLocation /> {location} <br />
+            <h4>
+              {nameFirst} {nameLast}
+            </h4>
+            <div className="text-start">
+              <ImLocation /> {trainingFacility} <br />
               <span className="fw-bold">
                 <br /> {company} <br />
               </span>
               <p>
-                {street} <br />
-                {suite} <br />
-                {state} <br />
-                {phone}
+                {address1} <br />
+                {address2} <br />
+                {city} {state} {postalCode}
+                <br />
+                P: {areaCode}-{prefix}-{suffix}
               </p>
             </div>
           </div>
@@ -49,5 +57,5 @@ export function PilotView({
 }
 
 PilotView.propTypes = {
-    pilot: PropTypes.object
-}
+  pilots: PropTypes.object,
+};

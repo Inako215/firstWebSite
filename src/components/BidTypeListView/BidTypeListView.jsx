@@ -4,7 +4,15 @@ import { TiFilter, TiPlus } from "react-icons/ti";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { BidTypeView } from "../BidTypeView/BidTypeView";
 
-export function BidTypeListView({ pilot }) {
+import { selectBidTypes } from "../../redux/bidTypeSlice";
+import { useSelector } from "react-redux";
+
+export function BidTypeListView({ airline, bidTypes }) {
+  const storedBidTypes = useSelector(selectBidTypes);
+  if (storedBidTypes && storedBidTypes.length > 0) {
+    bidTypes = storedBidTypes.filter((bidType) => bidType.airline === airline);
+  }
+
   return (
     <>
       <div className="container-fluid">
@@ -21,10 +29,10 @@ export function BidTypeListView({ pilot }) {
           <hr className="mt-2" />
           <div className="row">
             <div className="col-12">
-              {pilot?.map((pilot) => {
+              {bidTypes?.map((bidTypes) => {
                 return (
                   <>
-                    <BidTypeView pilot={pilot} />
+                    <BidTypeView bidTypes={bidTypes} />
                   </>
                 );
               })}
@@ -37,5 +45,6 @@ export function BidTypeListView({ pilot }) {
 }
 
 BidTypeListView.propTypes = {
-  pilot: PropTypes.any,
+  bidTypes: PropTypes.any,
+  airline: PropTypes.string,
 };

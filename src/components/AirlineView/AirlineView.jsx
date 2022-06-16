@@ -14,9 +14,9 @@ export function AirlineView({ name, path }) {
       <p>
         View the monthly bid data, import history &amp; download statistics.
       </p>
-      <Link to={path} className="btn btn-outline-dark">
-        <BsBoxArrowUpRight/> View
-      </Link>
+        <Link to={path} className="btn btn-outline-dark">
+          <BsBoxArrowUpRight /> View
+        </Link>
     </div>
   );
 }
