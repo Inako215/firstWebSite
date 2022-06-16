@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ImLocation } from "react-icons/im";
+import { FaTrash } from "react-icons/fa";
+import { TiPlus } from "react-icons/ti";
+import { BsFillPencilFill } from "react-icons/bs";
 
 export function PilotView({
   pilots: {
+    id,
     photo,
     seat,
     fleet,
@@ -21,6 +25,7 @@ export function PilotView({
     prefix,
     suffix,
   },
+  onDeletePilot,
 }) {
   return (
     <>
@@ -48,6 +53,20 @@ export function PilotView({
                 <br />
                 P: {areaCode}-{prefix}-{suffix}
               </p>
+              <div className="row">
+              <button className="btn btn2 rounded-3 m-1">
+                Add <TiPlus />
+              </button>
+              <button className="btn btn2 rounded-3 m-1">
+                Edit <BsFillPencilFill />
+              </button>
+              <button
+                className="btn btn3 rounded-3 m-1"
+                onClick={() => onDeletePilot({ id })}
+              >
+                Delete <FaTrash />
+              </button>
+              </div>
             </div>
           </div>
         </div>

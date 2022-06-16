@@ -4,14 +4,26 @@ import { TiFilter, TiPlus } from "react-icons/ti";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { BidTypeView } from "../BidTypeView/BidTypeView";
 
-import { selectBidTypes } from "../../redux/bidTypeSlice";
-import { useSelector } from "react-redux";
+import {
+  selectBidTypes,
+  deleteBidType,
+  importBidType,
+  cancelImportBidType,
+} from "../../redux/bidTypeSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 export function BidTypeListView({ airline, bidTypes }) {
   const storedBidTypes = useSelector(selectBidTypes);
   if (storedBidTypes && storedBidTypes.length > 0) {
     bidTypes = storedBidTypes.filter((bidType) => bidType.airline === airline);
   }
+
+  const dispatch = useDispatch();
+  const events = {
+    onDeleteBidType: (bidType) => dispatch(deleteBidType(bidType)),
+    onImportBidType: (bidType) => dispatch(importBidType(bidType)),
+    onCancelImportBidType: (bidType) => dispatch(cancelImportBidType(bidType)),
+  };
 
   return (
     <>
@@ -32,7 +44,7 @@ export function BidTypeListView({ airline, bidTypes }) {
               {bidTypes?.map((bidTypes) => {
                 return (
                   <>
-                    <BidTypeView bidTypes={bidTypes} />
+                    <BidTypeView bidTypes={bidTypes} {...events} />
                   </>
                 );
               })}

@@ -2,23 +2,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import { PilotView } from "../PilotView/PilotView";
 
-import { useSelector } from "react-redux";
-import { selectPilots } from "../../redux/pilotsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectPilots, deletePilot } from "../../redux/pilotsSlice";
 
-export function PilotsListView({ airline, pilots }) {
+export function PilotsListView({ airline, pilots, }) {
   const storedPilots = useSelector(selectPilots);
   if (storedPilots && storedPilots.length > 0) {
     pilots = storedPilots.filter((pilot) => pilot.airline === airline);
   }
+
+  const dispatch = useDispatch();
+  const events = {
+    onDeletePilot: (pilots) => dispatch(deletePilot(pilots)),
+  };
+
+
   return (
     <>
       <div className="container-fluid backg pt-2">
-        <div className="row banner">
-          <div className="col-sm-12">
-            <p className="display-5">Pilots</p>
-            <p>
+        <div className="banner">
+            <div className="display-5">Pilots</div>
+            <div className="row">
+            <div className="col-sm-8">
               Home / App Views / <span className="fw-bold">Contacts</span>
-            </p>
+            </div>
           </div>
         </div>
         <div className="row">
@@ -27,8 +34,8 @@ export function PilotsListView({ airline, pilots }) {
               <>
                 <div className="col-4 p-3">
                   <div className="banner card">
-                      <div className="card-body">
-                    <PilotView pilots={pilots} />
+                    <div className="card-body">
+                      <PilotView pilots={pilots} {...events}/>
                     </div>
                   </div>
                 </div>
@@ -44,4 +51,4 @@ export function PilotsListView({ airline, pilots }) {
 PilotsListView.propTypes = {
   pilots: PropTypes.any,
   airline: PropTypes.any,
-}
+};

@@ -6,7 +6,18 @@ import { BiChevronsRight } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
 
 export function BidTypeView({
-  bidTypes: { id, fleet, seat, domicile, status, numOfBidPeriods, lastImported },
+  bidTypes: {
+    id,
+    fleet,
+    seat,
+    domicile,
+    status,
+    numOfBidPeriods,
+    lastImported,
+  },
+  onDeleteBidType,
+  onImportBidType,
+  onCancelImportBidType,
 }) {
   return (
     <>
@@ -29,6 +40,7 @@ export function BidTypeView({
                 className={`btn btn1 rounded-3 m-1 ${
                   status === "IMPORTING" ? "d-none" : ""
                 }`}
+                onClick={() => onImportBidType({ id })}
               >
                 <ImCloudDownload /> Retry Import
               </button>
@@ -50,6 +62,7 @@ export function BidTypeView({
                 className={`btn btn3 rounded-3 m-1 ${
                   status === "IMPORTING" ? "d-none" : ""
                 }`}
+                onClick={() => onDeleteBidType({ id })}
               >
                 <FaTimes /> Delete
               </button>
@@ -57,6 +70,7 @@ export function BidTypeView({
                 className={`btn btn3 rounded-3 m-1 ${
                   status === "IMPORTING" ? "" : "d-none"
                 }`}
+                onClick={() => onCancelImportBidType({ id })}
               >
                 Cancel
               </button>
@@ -71,7 +85,7 @@ export function BidTypeView({
 
 BidTypeView.propTypes = {
   bidTypes: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     seat: PropTypes.any,
     domicile: PropTypes.string,
     fleet: PropTypes.string,

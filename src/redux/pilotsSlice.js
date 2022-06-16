@@ -369,9 +369,21 @@ const initialState = {
 export const pilotsSlice = createSlice({
   name: "pilots",
   initialState,
-  reducers: {},
+  reducers: {
+    deletePilot: (state, action) => {
+      //  console.log("called Delete Bidtype:" + action.payload.id)
+      const filteredPilots = state.pilots.filter(
+        (pilots) => pilots.id !== action.payload.id
+      );
+
+      return {
+        ...state,
+        pilots: filteredPilots,
+      };
+    },
+  },
 });
 
 export const selectPilots = (state) => state.pilots.pilots;
-
+export const { deletePilot } = pilotsSlice.actions;
 export default pilotsSlice.reducer;

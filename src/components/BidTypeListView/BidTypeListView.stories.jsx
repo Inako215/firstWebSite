@@ -28,11 +28,11 @@ export const AmericanAirlines = Template.bind({});
 AmericanAirlines.args = {
   airline: "AA",
   bidTypes: [
-    { ...BidTypes.Default.args.bidTypes, id: "1" },
-    { ...BidTypes.Default.args.bidTypes, id: "2" },
-    { ...BidTypes.Default.args.bidTypes, id: "3" },
-    { ...BidTypes.Default.args.bidTypes, id: "4" },
-    { ...BidTypes.Default.args.bidTypes, id: "5" },
+    { ...BidTypes.Default.args.bidTypes, id: 1 },
+    { ...BidTypes.Default.args.bidTypes, id: 2 },
+    { ...BidTypes.Default.args.bidTypes, id: 3 },
+    { ...BidTypes.Default.args.bidTypes, id: 4 },
+    { ...BidTypes.Default.args.bidTypes, id: 5 },
   ],
 };
 
@@ -40,10 +40,10 @@ export const AlaskaAirlines = Template.bind({});
 AlaskaAirlines.args = {
   airline: "AS",
   bidTypes: [
-    { ...BidTypes.Default.args.bidTypes, id: "6" },
-    { ...BidTypes.Default.args.bidTypes, id: "7" },
-    { ...BidTypes.Default.args.bidTypes, id: "8" },
-    { ...BidTypes.Default.args.bidTypes, id: "9" },
+    { ...BidTypes.Default.args.bidTypes, id: 6 },
+    { ...BidTypes.Default.args.bidTypes, id: 7 },
+    { ...BidTypes.Default.args.bidTypes, id: 8 },
+    { ...BidTypes.Default.args.bidTypes, id: 9 },
   ],
 };
 
@@ -51,9 +51,9 @@ export const FrontierAirlines = Template.bind({});
 FrontierAirlines.args = {
   airline: "FA",
   bidTypes: [
-    { ...BidTypes.Default.args.bidTypes, id: "10" },
-    { ...BidTypes.Default.args.bidTypes, id: "11" },
-    { ...BidTypes.Default.args.bidTypes, id: "12" },
+    { ...BidTypes.Default.args.bidTypes, id: 10 },
+    { ...BidTypes.Default.args.bidTypes, id: 11 },
+    { ...BidTypes.Default.args.bidTypes, id: 12 },
   ],
 };
 
@@ -61,7 +61,7 @@ export const UPS = Template.bind({});
 UPS.args = {
   airline: "UP",
   bidTypes: [
-    { ...BidTypes.Default.args.bidTypes, id: "13" },
-    { ...BidTypes.Default.args.bidTypes, id: "14" },
+    { ...BidTypes.Default.args.bidTypes, id: 13 },
+    { ...BidTypes.Default.args.bidTypes, id: 14 },
   ],
 };

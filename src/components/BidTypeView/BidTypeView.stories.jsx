@@ -11,7 +11,7 @@ const Template = (args) => <BidTypeView {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   bidTypes: {
-    id: "1",
+    id: 1,
     seat: "CAPTAIN",
     domicile: "ANC",
     fleet: "73G",
