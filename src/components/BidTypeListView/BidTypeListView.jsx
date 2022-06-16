@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { TiFilter, TiPlus } from "react-icons/ti";
 import { HiOutlineRefresh } from "react-icons/hi";
@@ -13,6 +13,8 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 
 export function BidTypeListView({ airline, bidTypes }) {
+  const [isAdding, setIsAdding] = useState(false);
+
   const storedBidTypes = useSelector(selectBidTypes);
   if (storedBidTypes && storedBidTypes.length > 0) {
     bidTypes = storedBidTypes.filter((bidType) => bidType.airline === airline);
@@ -23,6 +25,10 @@ export function BidTypeListView({ airline, bidTypes }) {
     onDeleteBidType: (bidType) => dispatch(deleteBidType(bidType)),
     onImportBidType: (bidType) => dispatch(importBidType(bidType)),
     onCancelImportBidType: (bidType) => dispatch(cancelImportBidType(bidType)),
+  };
+
+  const addCancelButtonClicked = () => {
+    setIsAdding(!isAdding);
   };
 
   return (
@@ -36,7 +42,14 @@ export function BidTypeListView({ airline, bidTypes }) {
           <div className="col-sm-2 fw-bold"># Bid Periods</div>
           <div className="col-sm-2 fw-bold">Last Import</div>
           <div className="icons col-sm-2 text-end fw-bold">
-            <TiFilter /> <TiPlus /> <HiOutlineRefresh />
+            <TiFilter />{" "}
+            <button
+              className={`btn btn-sm m-1 ${isAdding ? "btn-danger" : "btn"}`}
+              onClick={addCancelButtonClicked}
+            >
+              {isAdding ? "Close" : <TiPlus />}
+            </button>{" "}
+            <HiOutlineRefresh />
           </div>
           <hr className="mt-2" />
           <div className="row">

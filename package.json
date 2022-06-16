@@ -11,6 +11,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@reduxjs/toolkit": "^1.8.2",
     "bootstrap": "5.0.2",
     "bootstrap-icons": "^1.8.3",
     "immer": "9.0.5",
@@ -18,10 +19,11 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "react-redux": "7.2.4",
+    "react-redux": "^7.2.4",
     "react-router-dom": "^6.3.0",
     "react-toastify": "7.0.4",
-    "redux": "4.1.0",
+    "redux": "^4.1.0",
+    "redux-form": "^8.3.8",
     "redux-thunk": "2.3.0",
     "reselect": "4.0.0"
   },
@@ -123,5 +125,6 @@
     "root": true
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "webpack.config.dev.js"
 }
