@@ -183,10 +183,18 @@ export const bidTypeSlice = createSlice({
         status: "Current",
       };
     },
+    addBidType: (state, action) => {
+      action.payload.id = state.bidTypes[state.bidTypes.length - 1].id + 1;
+
+      return {
+        ...state,
+        bidTypes: [...state.bidTypes, action.payload],
+      };
+    },
   },
 });
 
 export const selectBidTypes = (state) => state.bidTypes.bidTypes;
-export const { deleteBidType, importBidType, cancelImportBidType } =
+export const { deleteBidType, importBidType, cancelImportBidType, addBidType } =
   bidTypeSlice.actions;
 export default bidTypeSlice.reducer;

@@ -28,14 +28,14 @@ export function BidTypeView({
               status === "IMPORTING" ? "status" : ""
             }`}
           >
-            <div className="col-sm-1">{id}</div>
-            <div className="col-sm-2">
+            <div className="col-sm-12 col-md-1">{id}</div>
+            <div className="col-12 col-md-2">
               {seat} {domicile} {fleet}
             </div>
-            <div className="col-sm-2 text-end">{status}</div>
-            <div className="col-sm-3 text-center">{numOfBidPeriods}</div>
-            <div className="col-sm-2 text-center">{lastImported}</div>
-            <div className={`col-sm-2 text-end`}>
+            <div className="col-sm-2 text-md-end">{status}</div>
+            <div className="col-sm-3 text-md-center">{numOfBidPeriods}</div>
+            <div className="col-sm-2 text-md-center">{lastImported}</div>
+            <div className={`col-sm-2 text-md-end`}>
               <button
                 className={`btn btn1 rounded-3 m-1 ${
                   status === "IMPORTING" ? "d-none" : ""

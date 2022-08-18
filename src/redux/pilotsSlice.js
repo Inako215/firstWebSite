@@ -4,7 +4,7 @@ import photo from "../public/images/stockPhoto.jpeg";
 const initialState = {
   pilots: [
     {
-      id: 1,
+      id: "1",
       airline: "AA",
       photo: photo,
       seat: "CPT",
@@ -19,12 +19,12 @@ const initialState = {
       city: "San Fransisco,",
       state: "CA",
       postalCode: "94107",
-      areaCode: "(123)",
+      areaCode: "123",
       prefix: "456",
       suffix: "7890",
     },
     {
-      id: 2,
+      id: "2",
       airline: "AA",
       photo: photo,
       seat: "DET",
@@ -39,12 +39,12 @@ const initialState = {
       city: "East London,",
       state: "London",
       postalCode: "5208",
-      areaCode: "(519)",
+      areaCode: "519",
       prefix: "555",
       suffix: "9374",
     },
     {
-      id: 3,
+      id: "3",
       airline: "AA",
       photo: photo,
       seat: "DR",
@@ -64,7 +64,7 @@ const initialState = {
       suffix: "07700 900461",
     },
     {
-      id: 4,
+      id: " 4",
       airline: "AA",
       photo: photo,
       seat: "KNG",
@@ -79,12 +79,12 @@ const initialState = {
       city: "Somewhere,",
       state: "Africa",
       postalCode: "99999",
-      areaCode: "(800)",
+      areaCode: "800",
       prefix: "975",
       suffix: "1042",
     },
     {
-      id: 5,
+      id: "5",
       airline: "AA",
       photo: photo,
       seat: "CPT",
@@ -99,7 +99,7 @@ const initialState = {
       city: "Atlanta,",
       state: "Georgia",
       postalCode: "30301",
-      areaCode: "(404)",
+      areaCode: "404",
       prefix: "0890",
       suffix: "3546",
     },
@@ -119,7 +119,7 @@ const initialState = {
       city: "Spokane",
       state: "WA",
       postalCode: "99216",
-      areaCode: "(509)",
+      areaCode: "509",
       prefix: "755",
       suffix: "8839",
     },
@@ -139,7 +139,7 @@ const initialState = {
       city: "Spokane",
       state: "WA",
       postalCode: "99208",
-      areaCode: "(509)",
+      areaCode: "509",
       prefix: "590",
       suffix: "3118",
     },
@@ -159,7 +159,7 @@ const initialState = {
       city: "Austin",
       state: "TX",
       postalCode: "73301",
-      areaCode: "(999)",
+      areaCode: "999",
       prefix: "888",
       suffix: "7777",
     },
@@ -179,7 +179,7 @@ const initialState = {
       city: "Coeur 'D Alene",
       state: "ID",
       postalCode: "83815",
-      areaCode: "(208)",
+      areaCode: "208",
       prefix: "995",
       suffix: "8147",
     },
@@ -199,12 +199,12 @@ const initialState = {
       city: "New York",
       state: "NY",
       postalCode: "10001",
-      areaCode: "(460)",
+      areaCode: "460",
       prefix: "755",
       suffix: "9375",
     },
     {
-      id: 10,
+      id: 11,
       airline: "AS",
       photo: photo,
       seat: "VRM",
@@ -219,12 +219,12 @@ const initialState = {
       city: "Beverly Hills",
       state: "CA",
       postalCode: "90210",
-      areaCode: "(259)",
+      areaCode: "259",
       prefix: "099",
       suffix: "0666",
     },
     {
-      id: 11,
+      id: 12,
       airline: "FA",
       photo: photo,
       seat: "HRO",
@@ -239,12 +239,12 @@ const initialState = {
       city: "Tokyo",
       state: "JP",
       postalCode: "8312Z",
-      areaCode: "(101)",
+      areaCode: "101",
       prefix: "010",
       suffix: "1101",
     },
     {
-      id: 12,
+      id: 13,
       airline: "FA",
       photo: photo,
       seat: "TRY",
@@ -259,12 +259,12 @@ const initialState = {
       city: "Antartica",
       state: "AT",
       postalCode: "69777",
-      areaCode: "(002)",
+      areaCode: "002",
       prefix: "777",
       suffix: "0000",
     },
     {
-      id: 13,
+      id: 14,
       airline: "FA",
       photo: photo,
       seat: "WAL",
@@ -279,12 +279,12 @@ const initialState = {
       city: "Liberty Lake",
       state: "WA",
       postalCode: "99027",
-      areaCode: "(305)",
+      areaCode: "305",
       prefix: "951",
       suffix: "9175",
     },
     {
-      id: 14,
+      id: 15,
       airline: "FA",
       photo: photo,
       seat: "CRY",
@@ -299,12 +299,12 @@ const initialState = {
       city: "Mead",
       state: "WA",
       postalCode: "00854",
-      areaCode: "(509)",
+      areaCode: "509",
       prefix: "019",
       suffix: "1947",
     },
     {
-      id: 15,
+      id: 16,
       airline: "UP",
       photo: photo,
       seat: "CPT",
@@ -319,12 +319,12 @@ const initialState = {
       city: "Worley",
       state: "ID",
       postalCode: "83830",
-      areaCode: "(208)",
+      areaCode: "208",
       prefix: "991",
       suffix: "0765",
     },
     {
-      id: 16,
+      id: 17,
       airline: "UP",
       photo: photo,
       seat: "YTR",
@@ -339,12 +339,12 @@ const initialState = {
       city: "London",
       state: "UK",
       postalCode: "5020",
-      areaCode: "(111)",
+      areaCode: "111",
       prefix: "703",
       suffix: "2020",
     },
     {
-      id: 17,
+      id: 18,
       airline: "UP",
       photo: photo,
       seat: "EXP",
@@ -359,7 +359,7 @@ const initialState = {
       city: "Kokaua",
       state: "HI",
       postalCode: "02931",
-      areaCode: "(754)",
+      areaCode: "754",
       prefix: "8901",
       suffix: "8833",
     },
@@ -371,7 +371,7 @@ export const pilotsSlice = createSlice({
   initialState,
   reducers: {
     deletePilot: (state, action) => {
-      //  console.log("called Delete Bidtype:" + action.payload.id)
+      console.log("called Delete Pilot: " + action.payload.id);
       const filteredPilots = state.pilots.filter(
         (pilots) => pilots.id !== action.payload.id
       );
@@ -381,9 +381,29 @@ export const pilotsSlice = createSlice({
         pilots: filteredPilots,
       };
     },
+
+    addPilot: (state, action) => {
+      //console.log("Called Add Pilot" + action.payload.id);
+
+      action.payload.id = state.pilots[state.pilots.length - 1].id + 1;
+
+      return {
+        ...state,
+        pilots: [...state.pilots, action.payload],
+      };
+    },
+
+    editPilot: (state, action) => {
+      console.log("Id is " + action.payload.id);
+
+      const index = state.pilots.findIndex(
+        (pilots) => pilots.id === action.payload.id,
+        [(state.pilots[index], action.payload)]
+      );
+    },
   },
 });
 
 export const selectPilots = (state) => state.pilots.pilots;
-export const { deletePilot } = pilotsSlice.actions;
+export const { deletePilot, addPilot, editPilot } = pilotsSlice.actions;
 export default pilotsSlice.reducer;

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ImLocation } from "react-icons/im";
 import { FaTrash } from "react-icons/fa";
-import { TiPlus } from "react-icons/ti";
 import { BsFillPencilFill } from "react-icons/bs";
+import { PilotUpdateView } from "../PilotUpdateView/PilotUpdateView";
 
 export function PilotView({
   pilots: {
@@ -26,29 +26,23 @@ export function PilotView({
     suffix,
   },
   onDeletePilot,
-  onUpdatePilot,
+  setIsUpdating,
 }) {
-  const [isAdding, setIsAdding] = useState(false);
-
-  const addCancelButtonClicked = () => {
-    setIsAdding(!isAdding);
-  };
-
   return (
     <>
       <div className="container-fluid">
-        <div className={`row ${isAdding ? "d-none" : ""}`}>
-          <div className="col-sm-2 col-md-4 text-center">
+        <div className={`d-flex row justify-content-center`}>
+          <div className="col-8 col-md-4 text-center">
             <img className="rounded-circle img-fluid" src={"/" + photo} />
             <p>
               {seat} {fleet} <br /> {domicile}
             </p>
           </div>
-          <div className="col-sm-10 col-md-8">
+          <div className="col-12 col-md-8 text-center text-md-start">
             <h4>
               {nameFirst} {nameLast}
             </h4>
-            <div className="text-start">
+            <div className="text-md-start">
               <ImLocation /> {trainingFacility} <br />
               <span className="fw-bold">
                 <br /> {company} <br />
@@ -58,17 +52,15 @@ export function PilotView({
                 {address2} <br />
                 {city} {state} {postalCode}
                 <br />
-                P: {areaCode}-{prefix}-{suffix}
+                P: ({areaCode})-{prefix}-{suffix}
               </p>
-              <div className="row">
-                <button className="btn btn2 rounded-3 m-1">
-                  Add <TiPlus />
-                </button>
+              <div className="d-flex row justify-content-evenly justify-content-md-start">
                 <button
-                  className={`btn btn2 rounded-3 m-1 ${
-                    isAdding ? "btn-danger" : "btn2"
-                  }`}
-                  onClick={addCancelButtonClicked}
+                  className={`btn pbtn2 rounded-3 m-1`}
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myUpdateModal"
+                  onClick={setIsUpdating}
                 >
                   Edit <BsFillPencilFill />
                 </button>

@@ -87,3 +87,14 @@
 .backg {
   background-color: #F3F3F4 !important;
 }
+
+.hidden {
+  display: none;
+}
+
+.pbtn2 {
+  background-color: #93b3d0;
+  color: #fbfbfd;
+  width: 150px;
+  word-spacing: 4px;
+}
