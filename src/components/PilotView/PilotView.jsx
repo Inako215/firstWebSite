@@ -37,7 +37,6 @@ export function PilotView({
             <p>
               {seat} {fleet} <br /> {domicile}
             </p>
-            id= {id}
           </div>
           <div className="col-12 col-md-8 text-center text-md-start">
             <h4>
